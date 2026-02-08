@@ -11,7 +11,7 @@ const OrderHistory = ({ token, onClose }) => {
 
   const fetchOrders = async () => {
     try {
-      const response = await fetch("http://localhost:8080/orders/user", {
+      const response = await fetch("https://abcdeventures.onrender.com/orders/user", {
         headers: { Authorization: token },
       });
       const data = await response.json();
