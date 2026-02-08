@@ -26,7 +26,7 @@ func main() {
 
 	// ✅ ADD THIS BLOCK
 	r.Use(cors.New(cors.Config{
-		AllowOrigins: []string{"http://localhost:5173"},
+		AllowOrigins: []string{"https://abcde-ventures-nine.vercel.app"},
 		AllowMethods: []string{"GET", "POST", "PUT", "DELETE"},
 		AllowHeaders: []string{"Origin", "Content-Type", "Authorization"},
 	}))
