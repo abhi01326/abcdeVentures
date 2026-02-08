@@ -15,7 +15,7 @@ const CartModal = ({ token, onClose, onAdd }) => {
 
   const fetchCart = async () => {
     try {
-      const response = await fetch("http://localhost:8080/carts", {
+      const response = await fetch("https://abcdeventures.onrender.com/carts", {
         headers: { Authorization: token },
       });
       const data = await response.json();
@@ -32,7 +32,7 @@ const CartModal = ({ token, onClose, onAdd }) => {
     setUpdatingQty(cartItemId);
     try {
       const response = await fetch(
-        `http://localhost:8080/carts/${cartItemId}`,
+        `https://abcdeventures.onrender.com/carts/${cartItemId}`,
         {
           method: "PUT",
           headers: {
@@ -58,7 +58,7 @@ const CartModal = ({ token, onClose, onAdd }) => {
     setRemovingItem(cartItemId);
     try {
       const response = await fetch(
-        `http://localhost:8080/carts/${cartItemId}`,
+        `https://abcdeventures.onrender.com/carts/${cartItemId}`,
         {
           method: "DELETE",
           headers: { Authorization: token },
@@ -80,7 +80,7 @@ const CartModal = ({ token, onClose, onAdd }) => {
     setProcessing(true);
     setError("");
     try {
-      const response = await fetch("http://localhost:8080/orders", {
+      const response = await fetch("https://abcdeventures.onrender.com/orders", {
         method: "POST",
         headers: { Authorization: token },
       });
