@@ -11,7 +11,7 @@ const ItemsList = ({ token, onAdd, onShowCart, onShowOrders }) => {
 
   const fetchItems = async () => {
     try {
-      const response = await fetch("http://localhost:8080/items");
+      const response = await fetch("https://abcdeventures.onrender.com/items");
       const data = await response.json();
       setItems(data);
     } catch (error) {
@@ -24,7 +24,7 @@ const ItemsList = ({ token, onAdd, onShowCart, onShowOrders }) => {
   const addToCart = async (itemId) => {
     setAddingItem(itemId);
     try {
-      const response = await fetch("http://localhost:8080/carts", {
+      const response = await fetch("https://abcdeventures.onrender.com/carts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
