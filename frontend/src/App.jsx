@@ -27,7 +27,7 @@ function App() {
 
     const fetchCartCount = async () => {
       try {
-        const response = await fetch("http://localhost:8080/carts", {
+        const response = await fetch("https://abcdeventures.onrender.com/carts", {
           headers: { Authorization: token },
         });
 
@@ -82,7 +82,7 @@ function App() {
     if (!token) return;
 
     try {
-      const response = await fetch("http://localhost:8080/carts", {
+      const response = await fetch("https://abcdeventures.onrender.com/carts", {
         headers: { Authorization: token },
       });
 
