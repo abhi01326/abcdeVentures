@@ -56,7 +56,7 @@ const Register = ({ onRegister }) => {
     }
 
     try {
-      const response = await fetch("http://localhost:8080/users", {
+      const response = await fetch("https://abcdeventures.onrender.com/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
